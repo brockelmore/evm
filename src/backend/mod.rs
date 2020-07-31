@@ -3,8 +3,10 @@
 //! Backends store state information of the VM, and exposes it to runtime.
 
 mod memory;
+mod memory_or_fork;
 
 pub use self::memory::{MemoryBackend, MemoryVicinity, MemoryAccount};
+pub use self::memory_or_fork::ForkMemoryBackend;
 
 use alloc::vec::Vec;
 use primitive_types::{H160, H256, U256};
